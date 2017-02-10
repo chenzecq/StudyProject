@@ -19,11 +19,11 @@ public class GuzhonghuiController {
 
 
     @RequestMapping(path = "/guzhonghui/{params}", method = RequestMethod.GET)
-    //path 为请求地址 其中 {params}  请求参数
+    //path 为请求地址 其中 {params}  为URI地址中的变量
     //method  请求方式
     @ResponseBody
     //向页面传值
-    public String helloGuzhong(@PathVariable String params) {
+    public String helloGuzhong(@PathVariable String params) {   //绑定URI地址中的变量到方法参数
         return guzhonghuiService.guzhonghui(params);
     }
 }
