@@ -17,6 +17,6 @@ public class YangmingWSImpl implements YangmingWS{
     private YangmingService yangmingService;
 
     public String sendMsg(String msg) {
-        return null;
+        return msg;
     }
 }

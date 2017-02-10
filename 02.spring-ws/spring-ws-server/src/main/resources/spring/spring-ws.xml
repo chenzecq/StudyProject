@@ -7,8 +7,8 @@
 		http://www.springframework.org/schema/context/spring-context.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
-    <!--<context:annotation-config/>-->
-    <!--<context:component-scan base-package="com.sinosoft.ws"/>-->
+    <context:annotation-config/>
+    <context:component-scan base-package="com.sinosoft.service,com.sinosoft.ws"/>
     <bean id="postprocess" class="org.apache.cxf.jaxws.spring.JaxWsWebServicePublisherBeanPostProcessor">
         <property name="urlPrefix" value="/"/>
     </bean>
