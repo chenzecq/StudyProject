@@ -1,7 +1,9 @@
 package com.sinosoft.service;
 
 import org.springframework.stereotype.Service;
-import org.testng.log4testng.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by henrykuo on 17-2-9.
@@ -9,7 +11,7 @@ import org.testng.log4testng.Logger;
 @Service
 public class GuohongyueServiceImpl implements GuohongyueService {
 
-    Logger logger = Logger.getLogger(GuohongyueServiceImpl.class);
+    private static Logger logger = LogManager.getLogger(GuohongyueServiceImpl.class);
 
 
     public String echo(String echo) {
