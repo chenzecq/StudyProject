@@ -1,7 +1,6 @@
 package com.sinosoft.service;
 
 import org.springframework.stereotype.Service;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
