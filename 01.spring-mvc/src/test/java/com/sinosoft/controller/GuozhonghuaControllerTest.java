@@ -26,8 +26,10 @@ import java.io.IOException;
 
 
 /**
- * Created by Jarod on 2017/2/9.
- */
+ * @description：Controller test
+ * @author： guozhonghua
+ * @create： 2017-02-11 10:30
+ **/
 @ContextConfiguration(
         locations = {
                 "classpath:spring/spring-context.xml",
@@ -35,20 +37,22 @@ import java.io.IOException;
         }
 )
 @WebAppConfiguration
-public class LigaomingControllerTest extends AbstractJUnit4SpringContextTests {
+public class GuozhonghuaControllerTest extends AbstractJUnit4SpringContextTests {
     @Autowired
     private WebApplicationContext wac;
     private MockMvc mockMvc;
     @Test
-    public void hello() throws Exception {
+    public void helloSpringMvcTest() throws Exception {
+
+
         this.mockMvc.perform(
                 MockMvcRequestBuilders
-                        .get("/test/Hello")//设置测试路径 以及参数
+                        .get("/guozhonghua/helloSpringMvc")
                         .accept(MediaType.TEXT_HTML_VALUE))
                 //成功打开页面
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 //打开页面的内容是hello
-                .andExpect(MockMvcResultMatchers.content().string("Hello world!"));//期望返回结果
+                .andExpect(MockMvcResultMatchers.content().string("helloSpringMvc"));
     }
 
     @Before
