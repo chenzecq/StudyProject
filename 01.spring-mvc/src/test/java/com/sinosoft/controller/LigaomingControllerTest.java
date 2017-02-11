@@ -43,12 +43,12 @@ public class LigaomingControllerTest extends AbstractJUnit4SpringContextTests {
     public void hello() throws Exception {
         this.mockMvc.perform(
                 MockMvcRequestBuilders
-                        .get("/ligaoming/hello")
+                        .get("/test/Hello")//设置测试路径 以及参数
                         .accept(MediaType.TEXT_HTML_VALUE))
                 //成功打开页面
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 //打开页面的内容是hello
-                .andExpect(MockMvcResultMatchers.content().string("hello"));
+                .andExpect(MockMvcResultMatchers.content().string("Hello world!"));//期望返回结果
     }
 
     @Before
