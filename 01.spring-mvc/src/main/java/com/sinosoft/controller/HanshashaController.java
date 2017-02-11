@@ -1,6 +1,6 @@
 package com.sinosoft.controller;
 
-import com.sinosoft.service.LigaomingService;
+import com.sinosoft.service.HanshashaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,16 +9,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * Created by ligm on 2017/2/9.
+ * Created by hss on 2017-02-10.
+ * Controller控制器
  */
 @Controller
-public class LigaomingController {
+public class HanshashaController {
     @Autowired
-    private LigaomingService ligaomingService;
-    @RequestMapping(path = "/test/{a}",method = RequestMethod.GET)//设置访问地址
+    private HanshashaService hanshashaService;
+
+    //请求路径和请求方式
+    @RequestMapping(path = "/hanshasha/{params}",method = RequestMethod.GET)
+
     @ResponseBody
-    public String Hello(@PathVariable String a,String b){//@PathVariable 取路径中的变量
-        b = " world!";
-        return ligaomingService.test(a,b);
+    public String helloHanshasha(@PathVariable String params){
+        return hanshashaService.Hanshasha(params);
     }
+
 }
