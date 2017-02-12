@@ -25,7 +25,7 @@ public class GuoruisongWSImplTest extends AbstractJUnit4SpringContextTests {
 
     public static class SimpleServer extends AbstractBusTestServerBase{
         protected void run() {//发布ws服务端
-            Object implementor = new YangmingWSImpl();
+            Object implementor = new GuoruisongWSImpl();
             String address = "http://localhost:" + 8080 + "/soap/GuoruisongWS";
             Endpoint.publish(address, implementor);
         }
