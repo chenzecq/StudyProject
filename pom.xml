@@ -12,6 +12,7 @@
         <module>01.spring-mvc</module>
         <module>02.spring-ws</module>
         <module>00.base-web</module>
+        <module>03.spring-dubbo</module>
     </modules>
 
     <dependencyManagement>
