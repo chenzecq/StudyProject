@@ -29,7 +29,7 @@ public class YuanwenboControllerTest extends AbstractJUnit4SpringContextTests {
     private WebApplicationContext wac;
     private MockMvc mockMvc;
     @Test
-    public void helloYangming() throws Exception {
+    public void yunwenboTest() throws Exception {
 
 
         this.mockMvc.perform(
