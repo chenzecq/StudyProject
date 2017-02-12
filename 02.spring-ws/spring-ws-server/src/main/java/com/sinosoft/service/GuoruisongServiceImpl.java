@@ -3,10 +3,12 @@ package com.sinosoft.service;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by Administrator on 2017/2/11.
+ * Created by grs on 2017/2/12.
  */
 @Service
-public class ZhaotuoServiceImpl implements ZhaotuoService{
+public class GuoruisongServiceImpl implements GuoruisongService {
+
+
     public String dealMsg(String msg) {
         return msg;
     }
