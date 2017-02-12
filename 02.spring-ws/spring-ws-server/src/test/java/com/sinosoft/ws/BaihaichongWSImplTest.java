@@ -57,7 +57,7 @@ public class BaihaichongWSImplTest extends AbstractJUnit4SpringContextTests {
         assertTrue(objects[0].equals("123"));
     }
     @Before
-    public static void init(){
+    public void init(){
         launchServer(SimpleServer.class, true);
     }//启动ws服务
 
