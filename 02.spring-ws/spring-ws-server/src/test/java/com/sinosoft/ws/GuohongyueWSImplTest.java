@@ -45,7 +45,7 @@ public class GuohongyueWSImplTest extends AbstractJUnit4SpringContextTests {
     public void sendMessage() throws Exception{
         JaxWsDynamicClientFactory dynamicClientFactory = JaxWsDynamicClientFactory.newInstance();
         Client client = dynamicClientFactory.createClient("http://localhost:8080/soap/GuohongyueWS?wsdl");
-        Object[] objects = client.invoke("sendMessage","1111");
+        Object[] objects = client.invoke("sendMsg","1111");
         assertTrue(objects!=null);
         assertTrue(objects.length==1);
         assertTrue(objects[0]!=null);

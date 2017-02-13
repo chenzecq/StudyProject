@@ -15,13 +15,14 @@ public class GuohongyueWSImpl implements GuohongyueWS {
     @Autowired
     private GuohongyueService guohongyueService;
 
-    public String sendMessage(String msg) {
+    public String sendMsg(String msg) {
         if(guohongyueService==null){
             return "wired null";
         }
 
         try {
-            return guohongyueService.dealMessage(msg);
+//            return guohongyueService.dealMessage(msg);
+            return msg;
         }catch (Exception e){
             e.printStackTrace();
             return null;
