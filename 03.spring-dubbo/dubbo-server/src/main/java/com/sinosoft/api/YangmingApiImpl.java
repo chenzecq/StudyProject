@@ -9,6 +9,6 @@ public class YangmingApiImpl implements YangmingApi {
 
 
     public String sengMsg(String str) {
-        return null;
+        return "Server:"+str;
     }
 }
