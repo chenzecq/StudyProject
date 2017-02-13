@@ -10,5 +10,5 @@ import javax.jws.WebService;
 @WebService
 public interface GuohongyueWS {
     @WebMethod
-    String sendMessage(@WebParam(name = "msg") String msg);
+    String sendMsg(@WebParam(name = "msg") String msg);
 }

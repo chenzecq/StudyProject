@@ -27,7 +27,7 @@ import static org.junit.Assert.*;
  */
 @ContextConfiguration(
         locations = {
-                "classpath:spring/spring-ws.xml"
+                "classpath:spring/spring-context.xml"
         }
 )
 @WebAppConfiguration
