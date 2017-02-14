@@ -1,5 +1,6 @@
 package com.sinosoft.api;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -13,9 +14,8 @@ import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 })
 public class YangmingApiImplTest extends AbstractJUnit4SpringContextTests {
 
-    @Autowired
-    private YangmingApi yangmingApi;
     @Test
+    @Ignore
     public void server() throws InterruptedException {
 
         Thread.sleep(Long.MAX_VALUE);

@@ -9,11 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>double-api</artifactId>
-
-
-    <dependencies>
-
-    </dependencies>
+    <artifactId>dubbo-api</artifactId>
 
 </project>

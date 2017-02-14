@@ -1,6 +1,7 @@
 package com.sinosoft.service;
 
 import com.sinosoft.api.YangmingApi;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -19,6 +20,7 @@ public class YangmingDubboServiceImplTest extends AbstractJUnit4SpringContextTes
     private YangmingDubboService yangmingDubboService;
 
     @Test
+    @Ignore
     public void sendMsg() throws Exception {
 
         System.out.println(yangmingDubboService.sendMsg("sdf"));
