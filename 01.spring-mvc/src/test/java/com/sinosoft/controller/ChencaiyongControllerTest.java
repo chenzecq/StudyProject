@@ -23,7 +23,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 
 /**
- * Created by chency on 2017/2/10.
+ * Created by chency on 2017/2/10.。
  */
 @WebAppConfiguration
 public class ChencaiyongControllerTest extends AbstractJUnit4SpringContextTests {
@@ -43,7 +43,7 @@ public class ChencaiyongControllerTest extends AbstractJUnit4SpringContextTests 
                 .get("/chencaiyong/chency")//在SpringMVC的专门管理各种请求地址的类里面获取指定的URL请求地址
                 .accept(MediaType.TEXT_HTML_VALUE))//设置接受返回结果的数据格式
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string("chency"));//"chency"是测试的期望结果
+                .andExpect(MockMvcResultMatchers.content().string("chency"));//"chency"是测试的期望结果,如果不是“chency”，测不通过
 
     }
 }
