@@ -5,10 +5,10 @@ import javax.jws.WebParam;
 import javax.jws.WebService;
 
 /**
- * Created by Administrator on 2017/2/11.
+ * Created by lyc on 2017/2/15.
  */
 @WebService
-public interface ZhaotuoWS {
+public interface LiuyachaoWS {
     @WebMethod
-    public String sendMsg(@WebParam(name="msg") String msg);
+    public String sendMsg(@WebParam(name = "msg") String msg);
 }
