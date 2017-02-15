@@ -19,7 +19,7 @@ public class ZhouChaoGuangController {
     @Autowired
     private ZhouChaoGuangService zhouChaoGuangService;
 
-    @RequestMapping(path="/zhouchaoguang/{params}",method = RequestMethod.GET)
+    @RequestMapping(path="/zhouchaogua/{params}",method = RequestMethod.GET)
     @ResponseBody
     public String zhou(@PathVariable String params) {
         System.out.println(params);
