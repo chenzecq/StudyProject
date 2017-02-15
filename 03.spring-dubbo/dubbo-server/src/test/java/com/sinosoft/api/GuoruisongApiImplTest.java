@@ -28,9 +28,9 @@ public class GuoruisongApiImplTest  extends AbstractJUnit4SpringContextTests {
 
     @Test
     @Ignore
-    public void server() throws InterruptedException {
+    public void server() throws InterruptedException, IOException {
 
-        Thread.sleep(Long.MAX_VALUE);
+        System.in.read();
     }
 
 }
