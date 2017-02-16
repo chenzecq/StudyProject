@@ -1,7 +1,6 @@
 package com.sinosoft.controller;
 
 import com.sinosoft.service.LiujiachengDubboService;
-import com.sinosoft.service.YangmingDubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
