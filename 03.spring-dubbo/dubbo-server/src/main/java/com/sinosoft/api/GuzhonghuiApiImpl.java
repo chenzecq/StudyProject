@@ -8,7 +8,7 @@ import com.alibaba.dubbo.config.annotation.Service;
  * @Description:
  */
 @Service   //添加Dubbo  的注解
-public class GuzhonfhuiApiImpl implements GuzhonghuiApi {
+public class GuzhonghuiApiImpl implements GuzhonghuiApi {
     public String sengMsg(String str) {
         return "Dubbo 服务端的业务处理" + str;
     }
