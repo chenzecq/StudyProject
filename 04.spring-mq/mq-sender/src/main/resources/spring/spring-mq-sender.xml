@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--<context:annotation-config/>-->
+    <!--<context:component-scan base-package="com.sinosoft.mq"/>-->
+
+
+    <!-- 连接用的JmsTemplate -->
+    <bean id="AppJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <!-- 在mq-common下queue-names-context.xml中配置对应bean -->
+        <!-- 指定连接的 MQ应用程序 -->
+        <property name="connectionFactory" ref="AppConnectionFactory"/>
+    </bean>
+
+
+</beans>

@@ -15,7 +15,8 @@ import org.junit.runners.Suite;
                 ShikunpengControllerTest.class,
                 SundongboControllerTest.class,
                 YangmingControllerTest.class,
-                ZhangyafengControllerTest.class
+                ZhangyafengControllerTest.class,
+                YanchongyuControllerTest.class
         }
 )
 public class SuiteTest {
