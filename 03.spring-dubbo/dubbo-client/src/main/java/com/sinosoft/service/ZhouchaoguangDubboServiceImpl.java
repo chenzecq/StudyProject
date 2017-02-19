@@ -1,5 +1,6 @@
 package com.sinosoft.service;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.sinosoft.api.ZhouchaoguangApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ZhouchaoguangDubboServiceImpl implements ZhouchaoguangDubboService {
-    @Autowired
+    @Reference
     private ZhouchaoguangApi zhouchaoguangApi;
     public String sendMsg(String msg) {
         return zhouchaoguangApi.sendMsg(msg);
