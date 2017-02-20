@@ -10,8 +10,8 @@ import java.util.logging.Logger;
 @Service
 public class CaonianServiceImp implements CaonianService {
     public String getMsg(String tMsg) {
-        System.out.print("Êä³ö----------"+tMsg);
-        Logger.getLogger("Êä³ö¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª"+tMsg);
+        System.out.print("è¾“å‡º----------"+tMsg);
+        Logger.getLogger("è¾“å‡ºâ€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•â€•"+tMsg);
         return tMsg;
     }
 }

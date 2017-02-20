@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * Created by wangna on 2017-02-10.
  */
-@Controller //ÓÃÓÚ±ê×¢¿ØÖÆ²ã×é¼ş
+@Controller //ç”¨äºæ ‡æ³¨æ§åˆ¶å±‚ç»„ä»¶
 public class WangnanaController {
-    @Autowired //¶Ô³ÉÔ±±äÁ¿½øĞĞ±ê×¢£¬Íê³É×Ô¶¯×°Åä£¨¸ù¾İÀàĞÍ½øĞĞ×Ô¶¯×°Åä£¬ÈçĞèÒª¸ù¾İÃû³Æ£¬ÔòĞèÅäºÏ@QualifierÊ¹ÓÃ£©
+    @Autowired //å¯¹æˆå‘˜å˜é‡è¿›è¡Œæ ‡æ³¨ï¼Œå®Œæˆè‡ªåŠ¨è£…é…ï¼ˆæ ¹æ®ç±»å‹è¿›è¡Œè‡ªåŠ¨è£…é…ï¼Œå¦‚éœ€è¦æ ¹æ®åç§°ï¼Œåˆ™éœ€é…åˆ@Qualifierä½¿ç”¨ï¼‰
     private WangnanaService tWangnanaService;
 
     @RequestMapping(path = "/wangnana/{params}", method = RequestMethod.GET)
-    //ÕˆÇó…¢”µ×¢½â,pathÎªÇëÇóµÄurlÂ·¾¶£¬{params}ÎªÇëÇó²ÎÊıÁĞ±í£¬½«¶ÔÓ¦µ½´¦Àí·½·¨ÖĞµÄPathVariableÖĞ
-    //methodÎªÇëÇóµÄmethodÀàĞÍ£¬¿ÉÎªGET POSTµÈ
+    //è«‹æ±‚åƒæ•¸æ³¨è§£,pathä¸ºè¯·æ±‚çš„urlè·¯å¾„ï¼Œ{params}ä¸ºè¯·æ±‚å‚æ•°åˆ—è¡¨ï¼Œå°†å¯¹åº”åˆ°å¤„ç†æ–¹æ³•ä¸­çš„PathVariableä¸­
+    //methodä¸ºè¯·æ±‚çš„methodç±»å‹ï¼Œå¯ä¸ºGET POSTç­‰
 
     @ResponseBody
     public String helloWangnana(@PathVariable String params){
         return tWangnanaService.getInputString(params);
-    }//´¦Àí·½·¨£¬¸ù¾İ´«Èë²ÎÊı×Ô¶¯Æ¥Åä´¦Àí·½·¨
+    }//å¤„ç†æ–¹æ³•ï¼Œæ ¹æ®ä¼ å…¥å‚æ•°è‡ªåŠ¨åŒ¹é…å¤„ç†æ–¹æ³•
 
 
 }

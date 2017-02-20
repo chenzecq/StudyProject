@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
  * Created by wangna on 2017-02-10.
  */
 @Service
-public class WangnanaServiceImpl implements WangnanaService { //WangnanaServiceÊµÏÖÊµÏÖÀà
+public class WangnanaServiceImpl implements WangnanaService { //WangnanaServiceå®ç°å®ç°ç±»
     public String getInputString(String tInputString) {
         return tInputString;
     }
