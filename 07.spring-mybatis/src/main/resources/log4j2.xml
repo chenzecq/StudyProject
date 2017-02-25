@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %l - %msg%n"/>
+        </Console>
+    </appenders>
+    <loggers>
+        <root level="error">
+            <appender-ref ref="Console"/>
+        </root>
+        <!--<logger name="com.mchange" level="error" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.springframework" level="debug" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.hibernate" level="error" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.hibernate.SQL" level="trace" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.apache.shiro" level="error" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.activiti" level="error" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.apache.ibatis" level="error" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.springframework.jdbc.datasource" level="error" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <!--<logger name="org.springframework.jms.core.JmsTemplate" level="error" additivity="false">-->
+            <!--<appender-ref ref="Console"/>-->
+        <!--</logger>-->
+        <logger name="com.sinosoft.mapper" level="debug" additivity="false">
+            <appender-ref ref="Console"/>
+        </logger>
+    </loggers>
+</configuration>
