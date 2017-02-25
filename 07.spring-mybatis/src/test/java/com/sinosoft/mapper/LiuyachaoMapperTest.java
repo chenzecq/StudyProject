@@ -1,5 +1,6 @@
 package com.sinosoft.mapper;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -21,6 +22,7 @@ import java.util.List;
 public class LiuyachaoMapperTest extends AbstractJUnit4SpringContextTests{
     @Autowired
     private  LiuyachaoService liuyachaoService;
+    @Ignore
     @Test
     public  void  testMapper(){
         LiuyachaoEntity liuyachaoEntity =  new LiuyachaoEntity();
