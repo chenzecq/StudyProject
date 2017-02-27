@@ -12,3 +12,12 @@ CREATE TABLE Yangming
   col1 VARCHAR(20),
   col2 VARCHAR(20)
 );
+
+
+CREATE TABLE liuyachao
+(
+  id   INT PRIMARY KEY,
+  col1 VARCHAR(20),
+  col2 VARCHAR(20)
+);
+

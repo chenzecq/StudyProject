@@ -19,14 +19,15 @@ import java.util.List;
                 "classpath:/spring/spring-mybatis.xml"
         }
 )
-public class LiuyachaoMapperTest extends AbstractJUnit4SpringContextTests{
+public class LiuyachaoMapperTest extends AbstractJUnit4SpringContextTests {
     @Autowired
-    private  LiuyachaoService liuyachaoService;
+    private LiuyachaoService liuyachaoService;
+
     @Ignore
     @Test
-    public  void  testMapper(){
-        LiuyachaoEntity liuyachaoEntity =  new LiuyachaoEntity();
-        LiuyachaoEntity aa =  new LiuyachaoEntity();
+    public void testMapper() {
+        LiuyachaoEntity liuyachaoEntity = new LiuyachaoEntity();
+        LiuyachaoEntity aa = new LiuyachaoEntity();
         liuyachaoEntity.setId(4);
 //        liuyachaoEntity.setCol1("4");
 //        liuyachaoEntity.setCol2("2");
@@ -34,11 +35,19 @@ public class LiuyachaoMapperTest extends AbstractJUnit4SpringContextTests{
 //        liuyachaoService.updateByPrimaryKey(liuyachaoEntity);
         List<LiuyachaoEntity> list1 = liuyachaoService.selectAll();
         List<LiuyachaoEntity> list2 = liuyachaoService.select(liuyachaoEntity);
-        LiuyachaoEntity test=list2.iterator().next();
+        LiuyachaoEntity test = list2.iterator().next();
 
         System.out.println(list1.size());
-        System.out.println(  test.getCol1());
+        System.out.println(test.getCol1());
 
+
+    }
+
+
+    @Test
+    public void getCol2() throws Exception {
+
+        LiuyachaoEntity liuyachaoEntity = liuyachaoService.getCol2(4, null, null);
 
     }
 
