@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.sinosoft.mapper.LiuyachaoDyMapper">
+<mapper namespace="com.sinosoft.mapper.LiuyachaoMapper">
 
     <select id="selectgetclo2" resultType="com.sinosoft.mapper.LiuyachaoEntity">
      SELECT * FROM Liuyachao WHERE 1=1

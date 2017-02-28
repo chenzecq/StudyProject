@@ -53,7 +53,7 @@ public class GezhengControllerTest extends AbstractJUnit4SpringContextTests {
          */
         mockMvc.perform(
                 //根据url得到一个GET方式的 MockHttpServletRequestBuilder,指定请求的Accept头信息
-                MockMvcRequestBuilders.get("/baihaichong/hello").accept(MediaType.TEXT_HTML_VALUE)
+                MockMvcRequestBuilders.get("/gezheng/hello").accept(MediaType.TEXT_HTML_VALUE)
         )
                 //添加验证断言,
                 // MockMvcResultMatchers:Spring mvc测试框架为了测试方便提供的静态工厂

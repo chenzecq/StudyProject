@@ -20,7 +20,7 @@ public class CommonService<T extends Mapper, E> implements Mapper<E> {
 
     protected Class<T> entityClass;
 
-    protected Mapper<E> mapper;
+    protected T mapper;
 
     protected Class getEntityClass() {
         if (entityClass == null) {
@@ -31,9 +31,9 @@ public class CommonService<T extends Mapper, E> implements Mapper<E> {
 
 
 //    @PostConstruct
-    private Mapper<E> getMapper() {
+    protected T getMapper() {
         if (mapper == null) {
-            mapper = (Mapper<E>) sqlSession.getMapper(getEntityClass());
+            mapper = (T) sqlSession.getMapper(getEntityClass());
         }
 
         return mapper;
@@ -71,7 +71,7 @@ public class CommonService<T extends Mapper, E> implements Mapper<E> {
 
     @Transactional
     public E selectByPrimaryKey(Object key) {
-        return getMapper().selectByPrimaryKey(key);
+        return (E) getMapper().selectByPrimaryKey(key);
     }
 
     @Transactional
@@ -86,7 +86,7 @@ public class CommonService<T extends Mapper, E> implements Mapper<E> {
 
     @Transactional
     public E selectOne(E record) {
-        return getMapper().selectOne(record);
+        return (E) getMapper().selectOne(record);
     }
 
     @Transactional

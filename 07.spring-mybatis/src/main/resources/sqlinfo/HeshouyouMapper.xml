@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sinosoft.mapper.HeshouyouMapper">
+    <!--返回结果集合-->
+    <resultMap id="BaseResultMap" type="com.sinosoft.mapper.HeshouyouEntity">
+        <id column="id" property="id" jdbcType="INTEGER" javaType="java.lang.Integer"></id>
+        <result column="col1" property="col1" jdbcType="VARCHAR" javaType="java.lang.String"></result>
+        <result column="col2" property="col2" jdbcType="VARCHAR" javaType="java.lang.String"></result>
+    </resultMap>
+    <!--sql片段-->
+    <sql id="BaseColumnList">
+        id,col1,col2
+    </sql>
+    <!--简单插入语句-->
+    <insert id="insertInfo" parameterType="com.sinosoft.mapper.HeshouyouMapper">
+      insert INTO heshouyou(id,col1,col2) VALUES (#{id},#{col1},#{col2})
+    </insert>
+    <!--简单更新语句-->
+    <update id="updateInfo" parameterType="com.sinosoft.mapper.HeshouyouMapper">
+      UPDATE heshouyou SET
+          <if test="col1 !=null">
+            col1 = #{col1},
+          </if>
+          <if test="col1 !=null">
+              col2 = #{col2}
+          </if>
+        where id = #{id}
+    </update>
+    <!--简单查询语句-->
+    <select id="getInfoById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+      select<include refid="BaseColumnList"></include>
+        from heshouyou
+        where id = #{id}
+    </select>
+    <!--简单删除语句-->
+    <delete id="deleteInfoById" parameterType="java.lang.Integer">
+      delete from heshouyou where id = #{id}
+    </delete>
+</mapper>
