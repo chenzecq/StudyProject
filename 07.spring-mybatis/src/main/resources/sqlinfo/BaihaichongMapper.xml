@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sinosoft.mapper.BaihaichongMapper">
+    <resultMap id="resultMap" type="com.sinosoft.mapper.BaihaichongEntity">
+        <id column="id" property="id"/>
+        <result column="col1" property="col1"/>
+        <result column="col2" property="col2"/>
+    </resultMap>
+    <select id="getById" resultMap="resultMap">
+      select * from Baihaichong
+      <where>
+          <if test="id!=null">
+              id=#{id}
+          </if>
+          <if test="!'bai1'.equals(col1)">
+              and col1='bai2'
+          </if>
+          <if test="'female'.equals(col2)">
+              and col2=#{col2}
+          </if>
+      </where>
+
+    </select>
+
+    <select id="getChoose" resultMap="resultMap">
+        SELECT * FROM baihaichong
+        <where>
+            <choose>
+                <when test="id!=null and col2!=null">
+                    id=#{id} and col2=#{col2}
+                </when>
+                <when test="col1!=null">
+                    and col1=#{col1}
+                </when>
+                <otherwise>
+
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+    <select id="getForeach" resultMap="resultMap">
+        SELECT  * from baihaichong WHERE id IN
+        <foreach  collection="list" item="item" index="index" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+</mapper>
+
