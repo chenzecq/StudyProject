@@ -10,8 +10,6 @@ import com.alibaba.dubbo.config.annotation.Service;
 //在生产者（提供者）provider中，只要实现Api就可以
 @Service
 public class HeshouyouApiImpl implements HeshouyouApi {
-
-    @Override
     public String sendMsg(String msg) {
         return "Server:"+msg;
     }

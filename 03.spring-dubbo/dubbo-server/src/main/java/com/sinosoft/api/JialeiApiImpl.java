@@ -7,8 +7,6 @@ import com.alibaba.dubbo.config.annotation.Service;
  */
 @Service
 public class JialeiApiImpl implements  JialeiApi{
-
-    @Override
     public String sendMsg(String msg) {
         return "server" + msg ;
     }
